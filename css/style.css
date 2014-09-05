@@ -1,10 +1,9 @@
-@import url(http://fonts.googleapis.com/css?family=Cedarville+Cursive);
-
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  color: rgba(0,0,0,0.9);
+  color: #fff;
+  background-color: #000;
 }
 
 body {
@@ -14,13 +13,17 @@ body {
 }
 
 h1 {
+  margin-left: 10px;
+  margin-right: 10px;
   font-size: 2.5rem;
   font-weight: bold;
-  line-height: 1.2rem;
+  line-height: 2.6rem;
   letter-spacing: -0.1rem;
 }
 
 p {
+  margin-left: 10px;
+  margin-right: 10px;
   font-size: 2.5rem;
   font-weight: bold;
   line-height: 2.5rem;
@@ -33,11 +36,27 @@ p small {
 
 a:link, a:visited {
   text-decoration: none;
-  color: rgba(0,0,0,0.9);
+  border-bottom: 4px solid #fff;
+  color: #fff;
 }
 
 a:hover, a:focus {
-  color: rgba(0,0,0,0.2);
+  color: #fff;
+}
+
+img {
+  margin-left: 10px;
+     -webkit-transition: all 1s ease-in-out;
+     -moz-transition: all 1s ease-in-out; 
+     -o-transition: all 1s ease-in-out; 
+     -ms-transition: all 1s ease-in-out; 
+}
+ 
+img:hover { 
+     -webkit-transform: rotate(360deg); 
+     -moz-transform: rotate(360deg); 
+     -o-transform: rotate(360deg);
+     -ms-transform: rotate(360deg); 
 }
 
 .outer {
@@ -55,6 +74,6 @@ a:hover, a:focus {
 .inner {
     margin-left: auto;
     margin-right: auto; 
-    max-width: 540px;
+    max-width: 600px;
 }
 

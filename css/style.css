@@ -30,7 +30,6 @@ p small {
 
 a:link, a:visited {
   text-decoration: none;
-  border-bottom: 4px solid #000;
   color: #000;
 }
 

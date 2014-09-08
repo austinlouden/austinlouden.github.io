@@ -9,32 +9,62 @@ body {
   -webkit-font-smoothing: antialiased;
   text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
   font-size: 2.5rem;
+  font-weight: bold;
   line-height: 2.5rem;
+  letter-spacing: -0.1rem;
+  color: #000;
 }
 
 h1 {
   font-size: 1.5rem;
-  font-weight: bold;
-  line-height: 2.6rem;
   letter-spacing: -0.05rem;
 }
 
-p {
-  font-weight: bold;
-  letter-spacing: -0.1rem;
-}
-
-p small {
+small {
   color: rgba(0,0,0,0.2);
 }
 
-a:link, a:visited {
-  text-decoration: none;
-  color: #000;
+.desc {
+  -moz-transition: color 0.2s ease-in;
+  -webkit-transition: color 0.2s ease-in;
+  -o-transition: color 0.2s ease-in;
+  transition: color 0.2s ease-in;
 }
 
-a:hover, a:focus {
+.desc:hover {
+  color: #1793d1;
+}
+
+a:link, a:visited {
+  font-weight: bold;
+  letter-spacing: -0.1rem;
+  text-decoration: none;
   color: #000;
+  text-decoration: none;
+  -moz-transition: color 0.2s ease-in;
+  -webkit-transition: color 0.2s ease-in;
+  -o-transition: color 0.2s ease-in;
+  transition: color 0.2s ease-in;
+}
+
+.pinterest a:hover, a:focus {
+  color: #cc2127;
+}
+
+.stagebloc a:hover, a:focus {
+  color: rgb(87,173,251);
+}
+
+.otherinbox a:hover, a:focus {
+  color: rgb(64,141,200);
+}
+
+.twitter a:hover, a:focus {
+  color: #55acee;
+}
+
+.google a:hover, a:focus {
+  color: #4285f4;
 }
 
 img {
@@ -77,7 +107,11 @@ img:hover {
 }
 
 @media screen and (max-width: 600px){
-    body{font-size:1.5rem; line-height: 1.5rem;
-      }
+  body {
+    font-size:1.5rem; line-height: 1.5rem;
+  }
+  img {
+    margin-top: 0px;
+  }
 }
 

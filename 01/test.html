@@ -1,0 +1,184 @@
+<html>
+<style>
+	canvas {
+	    padding-left: 0;
+	    padding-right: 0;
+	    margin-left: auto;
+	    margin-right: auto;
+	    display: block;
+	}
+	p {
+		text-align: center;
+		font-family: Helvetica;
+		color: rgb(0,200,0);
+		font-size: 16;
+	}
+	a:link {color:rgba(0,0,200,1); text-decoration: none;}
+	a:hover {text-decoration: underline;}
+
+</style>
+
+<body>
+	<canvas id="c" width="600" height="600" style="border: solid 1px gray;"></canvas>
+	<p><a href="https://dl.dropboxusercontent.com/u/1886020/maze_src.zip">Source</a>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>
+
+var canvas = document.getElementById("c"),
+        ctx = canvas.getContext("2d");
+        ctx.fillStyle = "rgba(0, 0, 200, 0.2)";
+
+//the session id, move options
+var id;
+var options = "options";
+var alerted = 0;
+var steps = 0;
+
+// a dictionary to store all of the visted positions (object literal)
+var positions = [];
+positions.push({
+	key: "0,0",
+	value: 1
+});
+
+//start the maze, set the sessions id for future queries
+$.ajax({async: false, cache:false, url: "/get.php?url=http://challenge.flipboard.com/m", success:function(result){
+        var data = result.split("|");
+        id = data[0];
+		options = data[1];
+		console.log("SESSION ID: " + data[0]);
+		ctx.fillRect(0, 0, 25, 25);
+}});
+
+//make a move every half a second
+setInterval(function(){makeMove(id, getMove(options))}, 100);
+
+
+function makeMove(id, move) {
+	if(move == null) {
+		return;
+	}
+
+	console.log("MOVING TO: (" + move.substring(3,4) + ", " + move.substring(7) + ")");
+	murl = "/get.php?url=" + encodeURIComponent("http://challenge.flipboard.com/m?s=" + id + move);
+
+	//make the move, set options to the new data
+	$.ajax({async: false, cache: false, url: murl, success:function(res) {
+			var data = res.replace("|", "");
+			options = data;
+	}});
+}
+
+//TODO: every time a move is chosen, add it to the positions dictionary with the key
+//property set to "x,y" and the value set to the number of times visted 
+
+function getMove(options) {
+
+	var moveString = "";
+	var optArray = options.split("/");
+	var points = optArray[1];
+
+	if(optArray[0] !== "end:true") {
+		console.log("OPTIONS: " + options);
+	}
+
+	//yay we're done
+	if(optArray[0] === "end:true") {
+		if (alerted == 0) {
+			alerted = 1;
+			console.log("DONE");
+			alert("Done. Solved in " + steps + " steps.");
+		}
+		return null;
+	}
+	else {
+
+		//if there are multiple options, make a choice
+		if(optArray[1].indexOf("),") !== -1) {
+
+			//convert the options into array format
+			var opts = optArray[1].split("),(");
+			opts[0] = opts[0].replace("(", "");
+			opts[opts.length-1] = opts[opts.length-1].replace(")", "");
+
+			//find the square that's been moved to the least
+			//number of times. move to it. need the opts index of
+			//the smallest value
+			var smallest = getTimesVisited(opts[0]);
+			var optsIndex = 0;
+			for(var i=0;i<opts.length;i++) {
+				if (getTimesVisited(opts[i]) < smallest) {
+					optsIndex = i;
+				}
+			}
+
+			var pointString = opts[optsIndex];
+			console.log("MUTLI OPTS STR: " + pointString);
+			var xpos = pointString.substring(0, pointString.indexOf(','));
+			var ypos = pointString.substring(pointString.indexOf(',')+1);
+			moveString = "&x=" + xpos + "&y=" + ypos;		
+
+
+			if(getTimesVisited(xpos + "," + ypos) == 0) {
+				positions.push({
+					key: xpos+ "," + ypos,
+					value: 1
+				});
+			}
+			else {
+				updateTimesVisited(xpos + "," + ypos);
+			}
+			steps++;
+			ctx.fillRect(parseInt(xpos)*30, parseInt(ypos)*30, 25, 25);
+
+		}
+
+		//if there's only one choice, then take it
+		else {
+			var pointString = optArray[1];
+			var xpos = pointString.substring(pointString.indexOf('(')+1, pointString.indexOf(','));
+			var ypos = pointString.substring(pointString.indexOf(',')+1, pointString.indexOf(')'));
+			moveString = "&x=" + xpos + "&y=" + ypos;
+
+			//if we've never been there before
+			if(getTimesVisited(xpos + "," + ypos) == 0) {
+				positions.push({
+					key: xpos+ "," + ypos,
+					value: 1
+				});
+			}
+			else {
+				updateTimesVisited(xpos + "," + ypos);
+			}
+
+			steps++;
+			ctx.fillRect(parseInt(xpos)*30, parseInt(ypos)*30, 25, 25);
+		}
+	}
+	return moveString;
+}
+
+//returns the number of times visted for location "x,y" else returns 0
+function getTimesVisited(location) {
+	var n = 0;
+	for (var i=0;i<positions.length;i++) {
+		if (positions[i].key == location){
+			n = positions[i].value;
+		}
+	}
+	return n;
+}
+
+//take a location, increments its value by 1
+function updateTimesVisited(location) {
+	for (var i=0;i<positions.length;i++) {
+		if (positions[i].key == location){
+			positions[i].value = positions[i].value + 1;
+		}
+	}
+}
+
+</script>
+</html>

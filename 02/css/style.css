@@ -1,0 +1,79 @@
+@import url(http://fonts.googleapis.com/css?family=Vollkorn:400italic,400);
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Vollkorn', serif;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+  font-size: 1.2em;
+  font-weight: 400;
+  line-height: 1.4em;
+  color: rgba(0,0,0,0.6);
+  background-color: rgb(252,250,242);
+}
+
+h1 {
+  /*color: #c90707; */
+  color: rgba(0,0,0,0.75);
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light" ,"Helvetica Neue", Helvetica, sans-serif; 
+  font-weight: 300; /*300 */
+  font-size: 1.8em;
+  margin-bottom: 40px;
+}
+
+a:link, a:visited {
+  color: rgba(0,0,0,0.75);
+  text-decoration: none;
+  -moz-transition: color 0.2s ease-in;
+  -webkit-transition: color 0.2s ease-in;
+  -o-transition: color 0.2s ease-in;
+  transition: color 0.2s ease-in;
+}
+
+a:hover, a:focus {
+  color: rgba(0,0,0,0.9);
+}
+
+.sub p {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 0.7em;
+  color: rgba(0,0,0,0.3);
+}
+
+.sub a:link, a:visited {
+  color: rgba(0,0,0,0.5);
+  text-decoration: none;
+  -moz-transition: color 0.2s ease-in;
+  -webkit-transition: color 0.2s ease-in;
+  -o-transition: color 0.2s ease-in;
+  transition: color 0.2s ease-in;
+}
+
+.sub a:hover, a:focus {
+  color: rgba(0,0,0,0.75);
+}
+
+.outer {
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.inner {
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-left: auto;
+    margin-right: auto; 
+    max-width: 420px;
+}

@@ -1,0 +1,68 @@
+==================================================================
+https://keybase.io/austinlouden
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://austinlouden.com
+  * I am austinlouden (https://keybase.io/austinlouden) on keybase.
+  * I have a public key with fingerprint 6DC6 FD8A 58BA 9294 93A4  D80D B375 5C8D A9C5 3775
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "6dc6fd8a58ba929493a4d80db3755c8da9c53775",
+            "host": "keybase.io",
+            "key_id": "b3755c8da9c53775",
+            "kid": "01010bf08e4038d54477fc03d2921e86735a5639507599e689509e121001ec0e338d0a",
+            "uid": "5cd52198045611f8947de73c8e5c9519",
+            "username": "austinlouden"
+        },
+        "service": {
+            "hostname": "austinlouden.com",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1424889731,
+    "expire_in": 157680000,
+    "prev": "c4e75c277d295d07ca9802a2445acd54b3ba7a8c914cfd7d6e6f698a19641d93",
+    "seqno": 6,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.4
+Comment: https://keybase.io/crypto
+
+yMIbAnicbZJ9aI1RHMfvnZfNZbm4aBbyEGK7nrfznHNuExIlsRRiG7fznHPuPFzP
+cz33udfLWpSWiCXkH4opNS83KfL2B1taXmptjS7KSllmC0nz3jjP4r+d88c55/f7
+fj/n/H6dh8UjAqHgrK2Vg125uxODT1tWZQLrP049WCeZDtsrxeqkHXxoSVh2LXdT
+rmV7UkwyGDUSDBGATIJVrGON6AzJzNQgABQxginQIARSmbTNSfsOgTFJmkctR8TE
+IW4xER1Gv2MoIStimgkZcV3WEAO6DmGCyhpTsapwZEANEGBoGMgQYMwNJHaYK6oi
+ywqnMteESSYClxnCAcqAqmAk68BQlATCOmQcahRxQDFQsC9Mc9cmO7lQk0zas+yk
+k2HclurLJJHJWpT7bfCrGUYVpc5OwUi5judQJymy2zwvlY75bm9vypfv5mb8Hyhu
+WjYT/RSOLHfTlmNLMUUoqWf5ZEVXdYQw1JQyie9JWS6PW74CQAPJYvj38KxAUp1D
+QFUIRVcAkyElokKVqLoOiChYNzWTQIIoVnSaYJAZ3EgYGBEFG7rCsCb5pe2yHSlm
+iGeSWoFMW7U28TIul+pbH9SMDARDgdGjCvwfEQiNCf//J0/OFP4xF01qy2/43Lw0
+HJjdsTY/NtAzvso78PJ8ReW7X6Hii3TGSjN4qHR1UajoxJ3ncMyajgY3+OFaY2W0
+oaQ3dbpKi5wLnrq1r/PbzNxA0YrGLZuWVPQl9xnhcq0jF3nz+Of5R7XJae3vG2eM
+jJ6Mst4L9772L7vePvD6xaLp9FOwfwKLXLWnVE5vV8bFuzdCcLngQn+7u6Dq6Lwb
+y4vXgtLq+U0D8ffNl47P+cHj0aaGuzXh0rOD587M7V5h3e67Wqhb2/NdoepOHF7Y
+PO9Yyea33wePdP6+eWV/k9tz7Yt5pG9PY37pdWdysK6lta38yjM051XucOZPJFm8
+rvfd/YLFS7J/AYElJXU=
+=vrdm
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/austinlouden
+
+==================================================================
+

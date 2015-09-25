@@ -9,7 +9,7 @@ body {
   -webkit-font-smoothing: antialiased;
   font-size: 1em;
   font-weight: 400;
-  line-height: 1.25em;
+  line-height: 1em;
   color: rgba(0,0,0, 0.7);
   background-color: #fff;
 }
@@ -22,13 +22,9 @@ h1 {
 }
 
 h2 {
-  color: rgba(200,200,200,1.0);
+  color: rgba(0,0,0,0.5);
   line-height: 1em;
   letter-spacing: -0.6px;
-}
-
-h3 {
-  font-size: 1em;
 }
 
 hr {
@@ -38,8 +34,16 @@ hr {
     margin-bottom: 24px;
 }
 
+.thin {
+    border: 0;
+    height: 5px;
+    background: rgba(0,0,0,0.2);
+    margin-bottom: 24px;
+    margin-top: 24px;
+}
+
 a:link, a:visited {
-  color: rgba(0,0,0, 0.5);
+  color: rgba(0,0,0,0.5);
   text-decoration: none;
   -moz-transition: color 0.2s ease-in;
   -webkit-transition: color 0.2s ease-in;

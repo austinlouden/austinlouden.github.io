@@ -7,23 +7,26 @@ html, body {
 body {
   font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
-  font-size: 1em;
-  font-weight: 400;
-  line-height: 1em;
-  color: rgba(0,0,0, 0.7);
+  font-size: 14pt;
+  font-weight: bold;
+  line-height: 16pt;
+  color: #555555;
   background-color: #fff;
 }
 
 h1 {
-  color: #333;
-  font-size: 2em;
-  letter-spacing: -1px;
+  font-size: 18pt;
+  letter-spacing: -0.5px;
+  margin-bottom: 2px;
 }
 
 h2 {
-  color: rgba(0,0,0,0.5);
-  line-height: 1em;
-  letter-spacing: -0.6px;
+  color: #B5B5B5;
+  font-size: 18pt;
+  line-height: 20pt;
+  letter-spacing: -0.5px;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 p {
@@ -31,23 +34,22 @@ p {
   margin-top: 10px;
 }
 
-hr {
-    border: 0;
-    height: 5px;
-    background: #333;
-    margin-bottom: 24px;
+p.meta {
+  font-size: 12pt;
+  font-weight: 400;
+  margin-top: 0px;
 }
 
-.thin {
+hr {
     border: 0;
-    height: 5px;
-    background: rgba(0,0,0,0.2);
-    margin-bottom: 24px;
-    margin-top: 24px;
+    height: 1px;
+    background: #E5E5E5;
+    margin-top: 32px;
+    margin-bottom: 4px;
 }
 
 a:link, a:visited {
-  color: rgba(0,0,0,0.5);
+  color: #B5B5B5;
   text-decoration: none;
   -moz-transition: color 0.2s ease-in;
   -webkit-transition: color 0.2s ease-in;
@@ -56,17 +58,7 @@ a:link, a:visited {
 }
 
 a:hover, a:focus {
-  color:#00c4ff;
-}
-
-.sub p {
-  font-size: 0.6em;
-  margin-bottom: 10px;
-  margin-top: 0px;
-}
-
-.sub a {
-  border-bottom: none;
+  color:#00C4FF;
 }
 
 .outer {

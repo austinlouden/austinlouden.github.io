@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Vollkorn:400,700);
+
 html, body {
   height: 100%;
   margin: 0;
@@ -11,13 +13,14 @@ body {
   font-weight: bold;
   line-height: 16pt;
   color: #555555;
-  background-color: #fff;
+  background-color: #060606;
 }
 
 h1 {
-  font-size: 18pt;
-  letter-spacing: -0.5px;
-  margin-bottom: 2px;
+    color: #fff;
+    letter-spacing: -1px;
+    font-size: 24pt;
+    line-height: 26pt; 
 }
 
 h2 {
@@ -78,5 +81,5 @@ a:hover, a:focus {
     padding-right: 12px;
     margin-left: auto;
     margin-right: auto; 
-    max-width: 420px;
+    max-width: 500px;
 }
